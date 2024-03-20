@@ -28,44 +28,8 @@ enum Commands {
     Diff(diff::DiffArgs),
     Merge(merge::MergeArgs),
 }
-fn print_len(s: String) {
-    println!("Size is {}", s.len());
-}
-trait Vehicle {
-    fn get_name(&self) -> &str;
 
-}
-trait Color {
-    fn get_color(&self) -> &str;
-}
-trait Car: Vehicle + Color {
-    fn get_speed(&self) -> u32;
-
-}
-#[derive(Copy, Clone, Eq)]
-struct Dacia {}
-
-impl dyn Clone {
-
-}
-
-impl Car for Dacia {
-    fn get_speed(&self) -> u32 {
-        todo!()
-    }
-    fn get_color(&self) -> &str {
-
-    }
-}
 fn main() {
-    fn cakl(){}
-    cakl();
-    println!("{}", std::mem::size_of::<dyn Name>());
-    let s = String::from("abc");
-    print_len(&s);
-    s.len();
-    return;
-    let x = b'a';
     let cli = Cli::parse();
 
     match &cli.command {
